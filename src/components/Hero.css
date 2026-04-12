@@ -77,7 +77,8 @@
 }
 
 .btn-primary:hover {
-  background: var(--secondary);
+  background: var(--text-primary);
+  filter: brightness(0.9);
 }
 
 .btn-secondary {
