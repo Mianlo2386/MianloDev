@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Hero.css';
 import fotoPerfil from '../assets/foto_perfil.jpg';
 
 const Hero = ({ lang }) => {
   const [text, setText] = useState('');
+  const timerRef = useRef(null);
   
   const content = {
     es: {
@@ -23,18 +24,21 @@ const Hero = ({ lang }) => {
   const t = content[lang];
 
   useEffect(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
     setText('');
     let index = 0;
-    const text = lang === 'es' ? 'Soy programador!' : "I'm a developer!";
-    const timer = setInterval(() => {
-      if (index <= text.length) {
-        setText(text.slice(0, index));
+    const targetText = lang === 'es' ? 'Soy programador!' : "I'm a developer!";
+    timerRef.current = setInterval(() => {
+      if (index < targetText.length) {
+        setText(targetText.slice(0, index + 1));
         index++;
       } else {
-        clearInterval(timer);
+        clearInterval(timerRef.current);
       }
     }, 150);
-    return () => clearInterval(timer);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [lang]);
 
   return (
