@@ -23,11 +23,13 @@ const Hero = ({ lang }) => {
 
   const t = content[lang];
 
+  const getTargetText = () => lang === 'es' ? 'Soy programador!' : "I'm a developer!";
+  
   useEffect(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     setText('');
     let index = 0;
-    const targetText = lang === 'es' ? 'Soy programador!' : "I'm a developer!";
+    const targetText = getTargetText();
     timerRef.current = setInterval(() => {
       if (index < targetText.length) {
         setText(targetText.slice(0, index + 1));
@@ -39,7 +41,7 @@ const Hero = ({ lang }) => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, []);
+  }, [lang]);
 
   return (
     <section id="inicio" className="hero-section">
