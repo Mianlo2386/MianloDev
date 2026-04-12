@@ -39,7 +39,7 @@ const Hero = ({ lang }) => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [lang]);
+  }, []);
 
   return (
     <section id="inicio" className="hero-section">
