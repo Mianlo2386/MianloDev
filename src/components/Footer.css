@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  flex-shrink: 0;
+}
+
+.footer h3 {
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

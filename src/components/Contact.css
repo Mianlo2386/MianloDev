@@ -1,0 +1,138 @@
+.contact-section {
+  padding: 60px 7%;
+  background: var(--primary);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact-detail {
+  margin-bottom: 20px;
+}
+
+.contact-detail strong {
+  display: inline;
+  margin-right: 10px;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-left: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: flex-start;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+
+.contact-form h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid var(--text-primary);
+  background: rgba(255,255,255,0.4);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.7);
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  filter: brightness(1.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

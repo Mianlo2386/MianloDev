@@ -1,0 +1,144 @@
+.about-section {
+  padding: 60px 7%;
+  background: var(--bg-primary);
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.section-label {
+  background: var(--primary);
+  padding: 5px 20px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.about-header h2 {
+  font-size: 2rem;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about-text h2 span {
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.ia-tag {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--primary);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.ia-tag i {
+  color: var(--secondary);
+  margin-right: 8px;
+}
+
+.about-experience {
+  text-align: center;
+}
+
+.experience-number {
+  width: 150px;
+  height: 150px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.experience-number span {
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+.experience-number.stopped {
+  animation: none;
+  transform: scale(1);
+}
+
+.about-experience h4 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.about-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.data-row {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+}
+
+.data-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.data-value {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-data {
+    flex-direction: column;
+  }
+  
+  .data-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
