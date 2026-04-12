@@ -20,7 +20,7 @@ const Portfolio = ({ lang }) => {
       img: 'https://i.imgur.com/d3nA2C4.png', 
       title: 'Ecommerce - IA', 
       tech: 'React/Node.js/AI',
-      link: 'https://betostore.com'
+      link: 'https://betostore.vercel.app/'
     },
     { 
       img: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600', 
