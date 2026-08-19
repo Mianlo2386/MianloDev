@@ -70,7 +70,7 @@ const Skills = ({ lang }) => {
       </div>
 
       <button className="cv-button">
-        <a href="/cv-new.pdf" download>{lang === 'es' ? 'DESCARGAR CV' : 'DOWNLOAD CV'}</a>
+        <a href="/CV-new.pdf" download>{lang === 'es' ? 'DESCARGAR CV' : 'DOWNLOAD CV'}</a>
       </button>
     </section>
   );
